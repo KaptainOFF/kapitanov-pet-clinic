@@ -14,7 +14,7 @@
 	</parent>
 	<groupId>com.kapitanov</groupId>
 	<artifactId>kapitanov-pet-clinic</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>kapitanov-pet-clinic</name>
 	<description>Kapitanov Pet Clinic Project</description>
 
@@ -40,6 +40,6 @@
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/KaptainOFF/kapitanov-pet-clinic.git</developerConnection>
-	  <tag>gugi</tag>
+	  <tag>HEAD</tag>
   </scm>
 </project>

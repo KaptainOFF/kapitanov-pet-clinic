@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Vets</title>
+<meta charset="UTF-8">
+<title>Vets</title>
 </head>
 <body>
-    <h1 th:text="'List of vets'">Vets index page</h1>
+	<h1 th:text="'List of vets'">Vets index page</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:if="${vets.empty}">
+				<td colspan="2">No vets Available</td>
+			</tr>
+			<tr th:each="vet: ${vets}">
+				<td><span th:text="${vet.firstName}"> Vet </span></td>
+				<td><span th:text="${vet.lastName}"> Vet </span></td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>

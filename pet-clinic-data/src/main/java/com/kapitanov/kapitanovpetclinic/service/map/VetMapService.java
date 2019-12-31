@@ -1,11 +1,14 @@
 package com.kapitanov.kapitanovpetclinic.service.map;
 
 import com.kapitanov.kapitanovpetclinic.model.Vet;
-import com.kapitanov.kapitanovpetclinic.service.CrudService;
+import com.kapitanov.kapitanovpetclinic.service.VetService;
 
 import java.util.Set;
 
-public class VetMapService extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+import org.springframework.stereotype.Service;
+
+@Service
+public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
@@ -13,7 +16,7 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements Crud
 
     @Override
     public Vet save(Vet vet) {
-        return super.save(vet.getId(), vet);
+        return super.save(vet);
     }
 
     @Override

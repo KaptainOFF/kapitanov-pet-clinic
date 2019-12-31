@@ -1,9 +1,16 @@
 package com.kapitanov.kapitanovpetclinic.model;
 
-import java.util.Set;
+public class PetType extends BaseEntity {
+	
+	private String name;
 
-public interface PetType {
-    Pet findById(Long id);
-    Pet save(Owner owner);
-    Set<Pet> findAll();
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
 }

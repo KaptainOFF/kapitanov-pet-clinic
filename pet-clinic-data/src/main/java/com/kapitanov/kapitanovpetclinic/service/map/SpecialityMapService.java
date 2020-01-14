@@ -1,10 +1,14 @@
 package com.kapitanov.kapitanovpetclinic.service.map;
 
-import java.util.Set;
-
 import com.kapitanov.kapitanovpetclinic.model.Specialty;
 import com.kapitanov.kapitanovpetclinic.service.SpecialityService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
+import java.util.Set;
+
+@Service
+@Profile({"default", "map"})
 public class SpecialityMapService extends AbstractMapService<Specialty, Long> implements SpecialityService {
 
 	@Override

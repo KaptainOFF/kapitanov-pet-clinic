@@ -1,13 +1,14 @@
 package com.kapitanov.kapitanovpetclinic.service.map;
 
-import java.util.Set;
-
-import org.springframework.stereotype.Service;
-
 import com.kapitanov.kapitanovpetclinic.model.PetType;
 import com.kapitanov.kapitanovpetclinic.service.PetTypeService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
+
+import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
 
 	@Override

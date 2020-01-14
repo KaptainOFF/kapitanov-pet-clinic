@@ -1,9 +1,5 @@
 package com.kapitanov.kapitanovpetclinic.bootstrap;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
-
 import com.kapitanov.kapitanovpetclinic.model.Owner;
 import com.kapitanov.kapitanovpetclinic.model.Pet;
 import com.kapitanov.kapitanovpetclinic.model.PetType;
@@ -11,6 +7,9 @@ import com.kapitanov.kapitanovpetclinic.model.Vet;
 import com.kapitanov.kapitanovpetclinic.service.OwnerService;
 import com.kapitanov.kapitanovpetclinic.service.PetTypeService;
 import com.kapitanov.kapitanovpetclinic.service.VetService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 @Component
 public class DataInit implements CommandLineRunner {
@@ -36,6 +35,9 @@ public class DataInit implements CommandLineRunner {
 		
 		PetType dogPetType = petTypeService.save(dog);
 		PetType catPetType = petTypeService.save(cat);
+
+		petTypeService.save(dogPetType);
+		petTypeService.save(catPetType);
 		
 		Owner owner = new Owner();
 		owner.setFirstName("Yani");

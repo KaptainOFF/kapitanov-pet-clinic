@@ -2,8 +2,6 @@ package com.kapitanov.kapitanovpetclinic.springdatajpa;
 
 import com.kapitanov.kapitanovpetclinic.model.Owner;
 import com.kapitanov.kapitanovpetclinic.repositories.OwnerRepository;
-import com.kapitanov.kapitanovpetclinic.repositories.PetRepository;
-import com.kapitanov.kapitanovpetclinic.repositories.PetTypeRepositoriy;
 import com.kapitanov.kapitanovpetclinic.service.OwnerService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;

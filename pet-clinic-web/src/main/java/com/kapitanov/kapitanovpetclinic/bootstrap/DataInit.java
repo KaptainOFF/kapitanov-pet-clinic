@@ -7,11 +7,13 @@ import com.kapitanov.kapitanovpetclinic.model.Vet;
 import com.kapitanov.kapitanovpetclinic.service.OwnerService;
 import com.kapitanov.kapitanovpetclinic.service.PetTypeService;
 import com.kapitanov.kapitanovpetclinic.service.VetService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
+@Slf4j
 public class DataInit implements CommandLineRunner {
 	
 	private final OwnerService ownerService;
@@ -24,7 +26,7 @@ public class DataInit implements CommandLineRunner {
 		this.vetService = vetService;
 		this.petTypeService = petTypeService;
 	}
-
+	
 	@Override
 	public void run(String... args) throws Exception {
 		PetType dog = new PetType();

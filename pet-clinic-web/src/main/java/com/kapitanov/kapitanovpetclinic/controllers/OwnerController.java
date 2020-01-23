@@ -1,11 +1,10 @@
 package com.kapitanov.kapitanovpetclinic.controllers;
 
+import com.kapitanov.kapitanovpetclinic.service.OwnerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.kapitanov.kapitanovpetclinic.service.OwnerService;
 
 @Controller
 @RequestMapping("/owners")
@@ -23,5 +22,10 @@ public class OwnerController {
 	public String owners(Model model) {
 		model.addAttribute("owners", ownerService.findAll());
 		return "owners/index";
+	}
+
+	@RequestMapping("/find")
+	public String findOwners() {
+		return "notimplemented";
 	}
 }
